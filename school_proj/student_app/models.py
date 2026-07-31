@@ -4,6 +4,7 @@ from .validators import (
     validate_school_email,
     validate_name_format,
     validate_combination_format,
+    validate_locker_number,
 )
 
 
@@ -31,6 +32,11 @@ class Student(models.Model):
         blank=False,
         unique=True,
         default=110,
+        validators=[
+            validators.MinValueValidator(1),
+            validators.MaxValueValidator(200),
+            validate_locker_number,
+        ],
     )
     locker_combination = models.CharField(
         max_length=20,

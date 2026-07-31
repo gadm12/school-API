@@ -38,3 +38,14 @@ def validate_combination_format(value: str):
     for n in digit:
         if not n.isdigit():
             raise ValidationError('Combination must be in the format "12-12-12"')
+
+def validate_locker_number(value):
+    if value < 1:
+        raise ValidationError(
+            "Ensure this value is greater than or equal to 1."
+        )
+
+    if value > 200:
+        raise ValidationError(
+            "Ensure this value is less than or equal to 200."
+        )
