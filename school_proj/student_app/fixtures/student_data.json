@@ -1,38 +1,98 @@
 [
-  {
-    "model": "student_app.student",
-    "pk": 1,
-    "fields": {
-      "name": "Moahmed S. Gad",
-      "student_email": "gad@school.com",
-      "personal_email": null,
-      "locker_number": 123,
-      "locker_combination": "87-94-24",
-      "good_student": true
-    }
-  },
-  {
-    "model": "student_app.student",
-    "pk": 2,
-    "fields": {
-      "name": "Matt j. Delen",
-      "student_email": "mat@school.com",
-      "personal_email": null,
-      "locker_number": 124,
-      "locker_combination": "73-46-54",
-      "good_student": true
-    }
-  },
-  {
-    "model": "student_app.student",
-    "pk": 3,
-    "fields": {
-      "name": "mike k. smith",
-      "student_email": "mike@school.com",
-      "personal_email": null,
-      "locker_number": 110,
-      "locker_combination": "12-12-12",
-      "good_student": true
-    }
+{
+  "model": "student_app.student",
+  "pk": 1,
+  "fields": {
+    "name": "Moahmed S. Gad",
+    "student_email": "gad@school.com",
+    "personal_email": null,
+    "locker_number": 123,
+    "locker_combination": "87-94-24",
+    "good_student": true
   }
+},
+{
+  "model": "student_app.student",
+  "pk": 2,
+  "fields": {
+    "name": "Matt j. Delen",
+    "student_email": "mat@school.com",
+    "personal_email": null,
+    "locker_number": 124,
+    "locker_combination": "73-46-54",
+    "good_student": true
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 3,
+  "fields": {
+    "name": "mike k. smith",
+    "student_email": "mike@school.com",
+    "personal_email": null,
+    "locker_number": 110,
+    "locker_combination": "12-12-12",
+    "good_student": true
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 4,
+  "fields": {
+    "name": "Jonny W. Wells",
+    "student_email": "th@school.com",
+    "personal_email": "th@gmail.com",
+    "locker_number": 20,
+    "locker_combination": "12-33-44",
+    "good_student": true
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 5,
+  "fields": {
+    "name": "John W. davis",
+    "student_email": "davis@school.com",
+    "personal_email": "yo@gmail.com",
+    "locker_number": 14,
+    "locker_combination": "12-12-12",
+    "good_student": true
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 6,
+  "fields": {
+    "name": "kelly M. Beck",
+    "student_email": "becca@school.com",
+    "personal_email": "qu@gmail.com",
+    "locker_number": 17,
+    "locker_combination": "12-12-12",
+    "good_student": true
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 7,
+  "fields": {
+    "name": "camion M. kah",
+    "student_email": "kag@school.com",
+    "personal_email": "kah@gmail.com",
+    "locker_number": 9,
+    "locker_combination": "12-12-12",
+    "good_student": true
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 8,
+  "fields": {
+    "name": "David M. Hickman",
+    "student_email": "dmh@school.com",
+    "personal_email": null,
+    "locker_number": 2,
+    "locker_combination": "12-12-12",
+    "good_student": true
+  }
+}
 ]
