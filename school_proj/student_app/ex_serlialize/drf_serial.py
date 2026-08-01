@@ -1,5 +1,5 @@
 from student_app.models import Student
-from student_app.serializer import StudentSerializer
+from school_proj.student_app.serializers import StudentSerializer
 
 all_students = Student.objects.all()
 ser_student = StudentSerializer(all_students, many=True)
