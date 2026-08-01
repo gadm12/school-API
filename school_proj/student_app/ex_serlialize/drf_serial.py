@@ -18,3 +18,5 @@ if new_student.is_valid():
     print(new_student.data)
 else:
     print(new_student.errors.get("name"))
+
+# pm shell < ./student_app/ex_serlialize/drf_serial.py
