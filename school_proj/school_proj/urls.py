@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.http import HttpResponse
 import math
 
@@ -35,9 +35,13 @@ def circle_radius(request, radius):
     return HttpResponse(math.pi * (radius**2))
 
 
+from student_app.views import AllStudents
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", hello),
     path("square/<int:width>/", area_square),
     path("circle/<int:radius>/", circle_radius),
+    path("api/v1/students/",include("student_app.urls")),
 ]
