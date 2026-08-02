@@ -1,4 +1,4 @@
-
+# pylint: disable=no-member
 from .serializers import StudentAllSerializer
 from .models import Student
 from rest_framework.views import APIView

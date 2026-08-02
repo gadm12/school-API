@@ -4,17 +4,21 @@ import "./App.css";
 
 function App() {
   const [students, setStudents] = useState(null);
+  const [subjects, setSubjects] = useState(null);
 
   useEffect(() => {
     const getSchoolData = async () => {
       try {
-        const response = await axios.get(
-          "http://127.0.0.1:8001/api/v1/students/",
-        );
+        const [studentsResponse, subjectsResponse] = await Promise.all([
+          axios.get("http://127.0.0.1:8001/api/v1/students/"),
+          axios.get("http://127.0.0.1:8001/api/v1/subjects/"),
+        ]);
 
-        setStudents(response.data);
-        console.log(response.data);
-        console.log(response.data.name);
+        setStudents(studentsResponse.data);
+        setSubjects(subjectsResponse.data);
+
+        console.log("Students:", studentsResponse.data);
+        console.log("Subjects:", subjectsResponse.data);
       } catch (error) {
         console.error(error.response?.data || error.message);
       }
@@ -23,7 +27,7 @@ function App() {
     getSchoolData();
   }, []);
 
-  if (!students) {
+  if (!students || !subjects) {
     return <p>Spinner</p>;
   }
 
@@ -36,6 +40,17 @@ function App() {
           <h3>{student.name}</h3>
           <p>{student.student_email}</p>
           <p>Locker: {student.locker_number}</p>
+        </div>
+      ))}
+
+      <hr />
+
+      <h1>All Subjects</h1>
+
+      {subjects.map((subject) => (
+        <div key={subject.subject_name}>
+          <h3>{subject.subject_name}</h3>
+          <p>{subject.professor}</p>
         </div>
       ))}
     </>

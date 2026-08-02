@@ -35,7 +35,6 @@ def circle_radius(request, radius):
     return HttpResponse(math.pi * (radius**2))
 
 
-from student_app.views import AllStudents
 
 
 urlpatterns = [
@@ -44,4 +43,5 @@ urlpatterns = [
     path("square/<int:width>/", area_square),
     path("circle/<int:radius>/", circle_radius),
     path("api/v1/students/",include("student_app.urls")),
+    path("api/v1/subjects/",include("subject_app.urls")),
 ]

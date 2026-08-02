@@ -1,8 +1,6 @@
-from .views import AllStudents
 from django.urls import path
+from .views import AllStudents
 
-
-#api/v1/student/
 urlpatterns = [
- path('',AllStudents.as_view(),name='all_student')   
+    path("", AllStudents.as_view(), name="all_students"),
 ]
