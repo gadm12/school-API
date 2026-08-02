@@ -1,0 +1,47 @@
+[
+{
+  "model": "grade_app.grade",
+  "pk": 1,
+  "fields": {
+    "grade": "98.50",
+    "a_subject": 1,
+    "student": 9
+  }
+},
+{
+  "model": "grade_app.grade",
+  "pk": 2,
+  "fields": {
+    "grade": "94.00",
+    "a_subject": 2,
+    "student": 9
+  }
+},
+{
+  "model": "grade_app.grade",
+  "pk": 3,
+  "fields": {
+    "grade": "91.50",
+    "a_subject": 1,
+    "student": 10
+  }
+},
+{
+  "model": "grade_app.grade",
+  "pk": 4,
+  "fields": {
+    "grade": "88.00",
+    "a_subject": 3,
+    "student": 10
+  }
+},
+{
+  "model": "grade_app.grade",
+  "pk": 5,
+  "fields": {
+    "grade": "95.00",
+    "a_subject": 3,
+    "student": 11
+  }
+}
+]

@@ -8,7 +8,8 @@
     "personal_email": null,
     "locker_number": 123,
     "locker_combination": "87-94-24",
-    "good_student": true
+    "good_student": true,
+    "subjects": []
   }
 },
 {
@@ -20,7 +21,8 @@
     "personal_email": null,
     "locker_number": 124,
     "locker_combination": "73-46-54",
-    "good_student": true
+    "good_student": true,
+    "subjects": []
   }
 },
 {
@@ -32,7 +34,8 @@
     "personal_email": null,
     "locker_number": 110,
     "locker_combination": "12-12-12",
-    "good_student": true
+    "good_student": true,
+    "subjects": []
   }
 },
 {
@@ -44,7 +47,8 @@
     "personal_email": "th@gmail.com",
     "locker_number": 20,
     "locker_combination": "12-33-44",
-    "good_student": true
+    "good_student": true,
+    "subjects": []
   }
 },
 {
@@ -56,7 +60,8 @@
     "personal_email": "yo@gmail.com",
     "locker_number": 14,
     "locker_combination": "12-12-12",
-    "good_student": true
+    "good_student": true,
+    "subjects": []
   }
 },
 {
@@ -68,7 +73,8 @@
     "personal_email": "qu@gmail.com",
     "locker_number": 17,
     "locker_combination": "12-12-12",
-    "good_student": true
+    "good_student": true,
+    "subjects": []
   }
 },
 {
@@ -80,7 +86,8 @@
     "personal_email": "kah@gmail.com",
     "locker_number": 9,
     "locker_combination": "12-12-12",
-    "good_student": true
+    "good_student": true,
+    "subjects": []
   }
 },
 {
@@ -92,7 +99,55 @@
     "personal_email": null,
     "locker_number": 2,
     "locker_combination": "12-12-12",
-    "good_student": true
+    "good_student": true,
+    "subjects": []
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 9,
+  "fields": {
+    "name": "ali S. Gad",
+    "student_email": "ali@school.com",
+    "personal_email": "ali@gmail.com",
+    "locker_number": 101,
+    "locker_combination": "12-12-12",
+    "good_student": true,
+    "subjects": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 10,
+  "fields": {
+    "name": "Alice M. Johnson",
+    "student_email": "alice@school.com",
+    "personal_email": "alice@gmail.com",
+    "locker_number": 102,
+    "locker_combination": "12-12-12",
+    "good_student": true,
+    "subjects": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 11,
+  "fields": {
+    "name": "Michael R. Carter",
+    "student_email": "michael@school.com",
+    "personal_email": "michael@gmail.com",
+    "locker_number": 103,
+    "locker_combination": "12-12-12",
+    "good_student": true,
+    "subjects": [
+      3
+    ]
   }
 }
 ]
