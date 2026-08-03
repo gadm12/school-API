@@ -1,26 +1,82 @@
 [
-{
-  "model": "subject_app.subject",
-  "pk": 1,
-  "fields": {
-    "subject_name": "Python",
-    "professor": "Professor Adam"
+  {
+    "model": "subject_app.subject",
+    "pk": 1,
+    "fields": {
+      "subject_name": "Python",
+      "professor": "Professor Adam"
+    }
+  },
+  {
+    "model": "subject_app.subject",
+    "pk": 2,
+    "fields": {
+      "subject_name": "Django",
+      "professor": "Professor Sarah"
+    }
+  },
+  {
+    "model": "subject_app.subject",
+    "pk": 3,
+    "fields": {
+      "subject_name": "Database",
+      "professor": "Professor James"
+    }
+  },
+  {
+    "model": "subject_app.subject",
+    "pk": 4,
+    "fields": {
+      "subject_name": "JavaScript",
+      "professor": "Professor Emily"
+    }
+  },
+  {
+    "model": "subject_app.subject",
+    "pk": 5,
+    "fields": {
+      "subject_name": "React",
+      "professor": "Professor Michael"
+    }
+  },
+  {
+    "model": "subject_app.subject",
+    "pk": 6,
+    "fields": {
+      "subject_name": "Data Structures",
+      "professor": "Professor Linda"
+    }
+  },
+  {
+    "model": "subject_app.subject",
+    "pk": 7,
+    "fields": {
+      "subject_name": "Algorithms",
+      "professor": "Professor Robert"
+    }
+  },
+  {
+    "model": "subject_app.subject",
+    "pk": 8,
+    "fields": {
+      "subject_name": "Web Design",
+      "professor": "Professor Karen"
+    }
+  },
+  {
+    "model": "subject_app.subject",
+    "pk": 9,
+    "fields": {
+      "subject_name": "Networking",
+      "professor": "Professor Daniel"
+    }
+  },
+  {
+    "model": "subject_app.subject",
+    "pk": 10,
+    "fields": {
+      "subject_name": "Operating Systems",
+      "professor": "Professor Nancy"
+    }
   }
-},
-{
-  "model": "subject_app.subject",
-  "pk": 2,
-  "fields": {
-    "subject_name": "Django",
-    "professor": "Professor Sarah"
-  }
-},
-{
-  "model": "subject_app.subject",
-  "pk": 3,
-  "fields": {
-    "subject_name": "Database",
-    "professor": "Professor James"
-  }
-}
 ]

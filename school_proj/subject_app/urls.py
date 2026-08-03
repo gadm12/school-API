@@ -1,5 +1,8 @@
-from .views import AllSubjects
+from .views import AllSubjects, ASubject
 from django.urls import path
 
-# api/v1/student/
-urlpatterns = [path("", AllSubjects.as_view(), name="all_subjects")]
+# api/v1/subject/
+urlpatterns = [
+    path("", AllSubjects.as_view(), name="all_subjects"),
+    path("<int:id>", ASubject.as_view(), name="a_subject"),
+]
