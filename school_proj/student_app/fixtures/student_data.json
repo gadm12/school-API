@@ -1,153 +1,1302 @@
 [
-{
-  "model": "student_app.student",
-  "pk": 1,
-  "fields": {
-    "name": "Moahmed S. Gad",
-    "student_email": "gad@school.com",
-    "personal_email": null,
-    "locker_number": 123,
-    "locker_combination": "87-94-24",
-    "good_student": true,
-    "subjects": []
+  {
+    "model": "student_app.student",
+    "pk": 1,
+    "fields": {
+      "name": "Samantha A. Anderson",
+      "student_email": "samanthaa@school.com",
+      "personal_email": null,
+      "locker_number": 63,
+      "locker_combination": "28-17-94",
+      "good_student": true,
+      "subjects": [2, 9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 2,
+    "fields": {
+      "name": "Pamela B. Diaz",
+      "student_email": "pamelad@school.com",
+      "personal_email": "pamela.diaz2@gmail.com",
+      "locker_number": 56,
+      "locker_combination": "29-64-77",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 3,
+    "fields": {
+      "name": "Katherine R. Hughes",
+      "student_email": "katherineh@school.com",
+      "personal_email": "katherine.hughes3@gmail.com",
+      "locker_number": 115,
+      "locker_combination": "75-35-00",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 4,
+    "fields": {
+      "name": "Jason I. Baker",
+      "student_email": "jasonb@school.com",
+      "personal_email": "jason.baker4@gmail.com",
+      "locker_number": 196,
+      "locker_combination": "43-13-11",
+      "good_student": true,
+      "subjects": [6]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 5,
+    "fields": {
+      "name": "Nicole Z. King",
+      "student_email": "nicolek@school.com",
+      "personal_email": "nicole.king5@gmail.com",
+      "locker_number": 118,
+      "locker_combination": "68-15-48",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 6,
+    "fields": {
+      "name": "Benjamin L. Richardson",
+      "student_email": "benjaminr@school.com",
+      "personal_email": null,
+      "locker_number": 181,
+      "locker_combination": "08-05-84",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 7,
+    "fields": {
+      "name": "David D. Robinson",
+      "student_email": "davidr@school.com",
+      "personal_email": "david.robinson7@gmail.com",
+      "locker_number": 117,
+      "locker_combination": "81-46-20",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 8,
+    "fields": {
+      "name": "Paul V. Hughes",
+      "student_email": "paulh@school.com",
+      "personal_email": null,
+      "locker_number": 156,
+      "locker_combination": "81-21-68",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 9,
+    "fields": {
+      "name": "Timothy U. Wright",
+      "student_email": "timothyw@school.com",
+      "personal_email": null,
+      "locker_number": 57,
+      "locker_combination": "87-41-98",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 10,
+    "fields": {
+      "name": "John M. Green",
+      "student_email": "johng@school.com",
+      "personal_email": "john.green10@gmail.com",
+      "locker_number": 55,
+      "locker_combination": "72-91-40",
+      "good_student": true,
+      "subjects": [8]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 11,
+    "fields": {
+      "name": "Charles E. King",
+      "student_email": "charlesk@school.com",
+      "personal_email": "charles.king11@gmail.com",
+      "locker_number": 144,
+      "locker_combination": "68-33-95",
+      "good_student": true,
+      "subjects": [4, 6, 7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 12,
+    "fields": {
+      "name": "Sarah P. Rogers",
+      "student_email": "sarahr@school.com",
+      "personal_email": "sarah.rogers12@gmail.com",
+      "locker_number": 13,
+      "locker_combination": "14-19-80",
+      "good_student": true,
+      "subjects": [2, 10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 13,
+    "fields": {
+      "name": "Deborah T. Carter",
+      "student_email": "deborahc@school.com",
+      "personal_email": null,
+      "locker_number": 136,
+      "locker_combination": "32-70-01",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 14,
+    "fields": {
+      "name": "Jonathan I. Long",
+      "student_email": "jonathanl@school.com",
+      "personal_email": null,
+      "locker_number": 88,
+      "locker_combination": "14-37-55",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 15,
+    "fields": {
+      "name": "Patrick I. Castillo",
+      "student_email": "patrickc@school.com",
+      "personal_email": null,
+      "locker_number": 46,
+      "locker_combination": "64-13-80",
+      "good_student": true,
+      "subjects": [4, 10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 16,
+    "fields": {
+      "name": "Karen Y. Mitchell",
+      "student_email": "karenm@school.com",
+      "personal_email": "karen.mitchell16@gmail.com",
+      "locker_number": 200,
+      "locker_combination": "67-00-76",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 17,
+    "fields": {
+      "name": "George H. Flores",
+      "student_email": "georgef@school.com",
+      "personal_email": "george.flores17@gmail.com",
+      "locker_number": 146,
+      "locker_combination": "10-10-93",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 18,
+    "fields": {
+      "name": "Ruth Y. Morgan",
+      "student_email": "ruthm@school.com",
+      "personal_email": "ruth.morgan18@gmail.com",
+      "locker_number": 169,
+      "locker_combination": "60-70-21",
+      "good_student": true,
+      "subjects": [4, 7, 9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 19,
+    "fields": {
+      "name": "Catherine M. Flores",
+      "student_email": "catherinef@school.com",
+      "personal_email": null,
+      "locker_number": 167,
+      "locker_combination": "47-56-66",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 20,
+    "fields": {
+      "name": "William A. Baker",
+      "student_email": "williamb@school.com",
+      "personal_email": null,
+      "locker_number": 59,
+      "locker_combination": "75-28-00",
+      "good_student": true,
+      "subjects": [2, 4]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 21,
+    "fields": {
+      "name": "John C. Nelson",
+      "student_email": "johnn@school.com",
+      "personal_email": "john.nelson21@gmail.com",
+      "locker_number": 72,
+      "locker_combination": "85-62-27",
+      "good_student": true,
+      "subjects": [8, 10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 22,
+    "fields": {
+      "name": "Ashley Z. Stewart",
+      "student_email": "ashleys@school.com",
+      "personal_email": "ashley.stewart22@gmail.com",
+      "locker_number": 25,
+      "locker_combination": "12-84-55",
+      "good_student": true,
+      "subjects": [1]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 23,
+    "fields": {
+      "name": "Gregory U. Wood",
+      "student_email": "gregoryw@school.com",
+      "personal_email": "gregory.wood23@gmail.com",
+      "locker_number": 104,
+      "locker_combination": "93-43-13",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 24,
+    "fields": {
+      "name": "Laura N. Moore",
+      "student_email": "lauram@school.com",
+      "personal_email": "laura.moore24@gmail.com",
+      "locker_number": 119,
+      "locker_combination": "31-09-56",
+      "good_student": true,
+      "subjects": [1, 2, 9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 25,
+    "fields": {
+      "name": "Barbara H. Long",
+      "student_email": "barbaral@school.com",
+      "personal_email": "barbara.long25@gmail.com",
+      "locker_number": 125,
+      "locker_combination": "61-27-51",
+      "good_student": false,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 26,
+    "fields": {
+      "name": "James I. Roberts",
+      "student_email": "jamesr@school.com",
+      "personal_email": null,
+      "locker_number": 74,
+      "locker_combination": "54-89-93",
+      "good_student": false,
+      "subjects": [8]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 27,
+    "fields": {
+      "name": "Karen J. Harris",
+      "student_email": "karenh@school.com",
+      "personal_email": "karen.harris27@gmail.com",
+      "locker_number": 15,
+      "locker_combination": "74-94-69",
+      "good_student": true,
+      "subjects": [1]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 28,
+    "fields": {
+      "name": "Justin Q. Morris",
+      "student_email": "justinm@school.com",
+      "personal_email": null,
+      "locker_number": 41,
+      "locker_combination": "07-65-10",
+      "good_student": false,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 29,
+    "fields": {
+      "name": "William H. Gray",
+      "student_email": "williamg@school.com",
+      "personal_email": "william.gray29@gmail.com",
+      "locker_number": 64,
+      "locker_combination": "74-76-05",
+      "good_student": true,
+      "subjects": [10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 30,
+    "fields": {
+      "name": "Larry K. Gutierrez",
+      "student_email": "larryg@school.com",
+      "personal_email": null,
+      "locker_number": 53,
+      "locker_combination": "85-91-40",
+      "good_student": true,
+      "subjects": [5]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 31,
+    "fields": {
+      "name": "Ryan Y. Green",
+      "student_email": "ryang@school.com",
+      "personal_email": null,
+      "locker_number": 3,
+      "locker_combination": "58-79-72",
+      "good_student": false,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 32,
+    "fields": {
+      "name": "Margaret I. Cook",
+      "student_email": "margaretc@school.com",
+      "personal_email": "margaret.cook32@gmail.com",
+      "locker_number": 90,
+      "locker_combination": "08-31-47",
+      "good_student": true,
+      "subjects": [9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 33,
+    "fields": {
+      "name": "Alexander T. Hill",
+      "student_email": "alexanderh@school.com",
+      "personal_email": null,
+      "locker_number": 168,
+      "locker_combination": "67-01-85",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 34,
+    "fields": {
+      "name": "Frank E. Wilson",
+      "student_email": "frankw@school.com",
+      "personal_email": "frank.wilson34@gmail.com",
+      "locker_number": 28,
+      "locker_combination": "95-70-19",
+      "good_student": true,
+      "subjects": [4, 6]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 35,
+    "fields": {
+      "name": "Debra I. Brooks",
+      "student_email": "debrab@school.com",
+      "personal_email": "debra.brooks35@gmail.com",
+      "locker_number": 65,
+      "locker_combination": "06-11-81",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 36,
+    "fields": {
+      "name": "James Y. Nelson",
+      "student_email": "jamesn@school.com",
+      "personal_email": "james.nelson36@gmail.com",
+      "locker_number": 68,
+      "locker_combination": "20-94-56",
+      "good_student": true,
+      "subjects": [1]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 37,
+    "fields": {
+      "name": "Joseph W. Martinez",
+      "student_email": "josephm@school.com",
+      "personal_email": null,
+      "locker_number": 140,
+      "locker_combination": "04-47-74",
+      "good_student": true,
+      "subjects": [1]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 38,
+    "fields": {
+      "name": "Michelle Z. Campbell",
+      "student_email": "michellec@school.com",
+      "personal_email": null,
+      "locker_number": 11,
+      "locker_combination": "45-26-87",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 39,
+    "fields": {
+      "name": "Maria N. Bailey",
+      "student_email": "mariab@school.com",
+      "personal_email": null,
+      "locker_number": 192,
+      "locker_combination": "19-30-20",
+      "good_student": false,
+      "subjects": [1, 7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 40,
+    "fields": {
+      "name": "Daniel K. Patel",
+      "student_email": "danielp@school.com",
+      "personal_email": null,
+      "locker_number": 106,
+      "locker_combination": "85-94-31",
+      "good_student": true,
+      "subjects": [2, 7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 41,
+    "fields": {
+      "name": "John H. Stewart",
+      "student_email": "johns@school.com",
+      "personal_email": "john.stewart41@gmail.com",
+      "locker_number": 79,
+      "locker_combination": "29-28-03",
+      "good_student": true,
+      "subjects": [5]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 42,
+    "fields": {
+      "name": "William I. Foster",
+      "student_email": "williamf@school.com",
+      "personal_email": "william.foster42@gmail.com",
+      "locker_number": 131,
+      "locker_combination": "51-86-68",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 43,
+    "fields": {
+      "name": "Kimberly S. Thompson",
+      "student_email": "kimberlyt@school.com",
+      "personal_email": null,
+      "locker_number": 10,
+      "locker_combination": "13-76-55",
+      "good_student": true,
+      "subjects": [7, 9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 44,
+    "fields": {
+      "name": "Joseph S. Roberts",
+      "student_email": "josephr@school.com",
+      "personal_email": "joseph.roberts44@gmail.com",
+      "locker_number": 12,
+      "locker_combination": "90-55-00",
+      "good_student": true,
+      "subjects": [4, 6]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 45,
+    "fields": {
+      "name": "Sharon V. Rodriguez",
+      "student_email": "sharonr@school.com",
+      "personal_email": null,
+      "locker_number": 160,
+      "locker_combination": "40-84-15",
+      "good_student": true,
+      "subjects": [5]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 46,
+    "fields": {
+      "name": "Christine K. Evans",
+      "student_email": "christinee@school.com",
+      "personal_email": "christine.evans46@gmail.com",
+      "locker_number": 76,
+      "locker_combination": "70-16-24",
+      "good_student": true,
+      "subjects": [3, 5, 7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 47,
+    "fields": {
+      "name": "Stephen J. Smith",
+      "student_email": "stephens@school.com",
+      "personal_email": "stephen.smith47@gmail.com",
+      "locker_number": 111,
+      "locker_combination": "74-77-83",
+      "good_student": true,
+      "subjects": [4]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 48,
+    "fields": {
+      "name": "Shirley Z. Stewart",
+      "student_email": "shirleys@school.com",
+      "personal_email": null,
+      "locker_number": 189,
+      "locker_combination": "21-84-10",
+      "good_student": true,
+      "subjects": [6, 10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 49,
+    "fields": {
+      "name": "Barbara H. Long",
+      "student_email": "barbaral1@school.com",
+      "personal_email": null,
+      "locker_number": 58,
+      "locker_combination": "25-18-03",
+      "good_student": true,
+      "subjects": [2, 8, 10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 50,
+    "fields": {
+      "name": "Rebecca S. Watson",
+      "student_email": "rebeccaw@school.com",
+      "personal_email": "rebecca.watson50@gmail.com",
+      "locker_number": 179,
+      "locker_combination": "49-63-51",
+      "good_student": true,
+      "subjects": [1, 2]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 51,
+    "fields": {
+      "name": "Maria H. Diaz",
+      "student_email": "mariad@school.com",
+      "personal_email": "maria.diaz51@gmail.com",
+      "locker_number": 133,
+      "locker_combination": "59-06-71",
+      "good_student": true,
+      "subjects": [3, 8]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 52,
+    "fields": {
+      "name": "Cynthia Q. Bennett",
+      "student_email": "cynthiab@school.com",
+      "personal_email": null,
+      "locker_number": 153,
+      "locker_combination": "40-96-56",
+      "good_student": true,
+      "subjects": [7, 9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 53,
+    "fields": {
+      "name": "Stephen F. Edwards",
+      "student_email": "stephene@school.com",
+      "personal_email": null,
+      "locker_number": 122,
+      "locker_combination": "57-33-96",
+      "good_student": true,
+      "subjects": [8, 9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 54,
+    "fields": {
+      "name": "Benjamin I. Walker",
+      "student_email": "benjaminw@school.com",
+      "personal_email": "benjamin.walker54@gmail.com",
+      "locker_number": 183,
+      "locker_combination": "36-30-34",
+      "good_student": true,
+      "subjects": [2, 3, 9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 55,
+    "fields": {
+      "name": "Sandra W. Roberts",
+      "student_email": "sandrar@school.com",
+      "personal_email": "sandra.roberts55@gmail.com",
+      "locker_number": 17,
+      "locker_combination": "53-52-42",
+      "good_student": true,
+      "subjects": [4]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 56,
+    "fields": {
+      "name": "Rebecca Y. Roberts",
+      "student_email": "rebeccar@school.com",
+      "personal_email": null,
+      "locker_number": 6,
+      "locker_combination": "97-73-48",
+      "good_student": true,
+      "subjects": [5, 7, 9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 57,
+    "fields": {
+      "name": "Jonathan X. Myers",
+      "student_email": "jonathanm@school.com",
+      "personal_email": "jonathan.myers57@gmail.com",
+      "locker_number": 155,
+      "locker_combination": "28-62-28",
+      "good_student": true,
+      "subjects": [7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 58,
+    "fields": {
+      "name": "Carol V. Bennett",
+      "student_email": "carolb@school.com",
+      "personal_email": null,
+      "locker_number": 186,
+      "locker_combination": "21-59-16",
+      "good_student": false,
+      "subjects": [7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 59,
+    "fields": {
+      "name": "Pamela V. Reed",
+      "student_email": "pamelar@school.com",
+      "personal_email": "pamela.reed59@gmail.com",
+      "locker_number": 165,
+      "locker_combination": "54-17-59",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 60,
+    "fields": {
+      "name": "Dorothy O. Ramirez",
+      "student_email": "dorothyr@school.com",
+      "personal_email": "dorothy.ramirez60@gmail.com",
+      "locker_number": 195,
+      "locker_combination": "48-35-96",
+      "good_student": false,
+      "subjects": [2]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 61,
+    "fields": {
+      "name": "Jacob X. Williams",
+      "student_email": "jacobw@school.com",
+      "personal_email": "jacob.williams61@gmail.com",
+      "locker_number": 18,
+      "locker_combination": "99-83-05",
+      "good_student": true,
+      "subjects": [1, 3, 4]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 62,
+    "fields": {
+      "name": "Donald P. Taylor",
+      "student_email": "donaldt@school.com",
+      "personal_email": null,
+      "locker_number": 145,
+      "locker_combination": "27-59-89",
+      "good_student": true,
+      "subjects": [10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 63,
+    "fields": {
+      "name": "Nicole W. Myers",
+      "student_email": "nicolem@school.com",
+      "personal_email": "nicole.myers63@gmail.com",
+      "locker_number": 42,
+      "locker_combination": "39-13-74",
+      "good_student": true,
+      "subjects": [7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 64,
+    "fields": {
+      "name": "Ronald G. Alvarez",
+      "student_email": "ronalda@school.com",
+      "personal_email": "ronald.alvarez64@gmail.com",
+      "locker_number": 177,
+      "locker_combination": "80-31-13",
+      "good_student": true,
+      "subjects": [10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 65,
+    "fields": {
+      "name": "Jessica Z. Reed",
+      "student_email": "jessicar@school.com",
+      "personal_email": "jessica.reed65@gmail.com",
+      "locker_number": 137,
+      "locker_combination": "54-84-47",
+      "good_student": true,
+      "subjects": [1, 7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 66,
+    "fields": {
+      "name": "Gary N. Wilson",
+      "student_email": "garyw@school.com",
+      "personal_email": null,
+      "locker_number": 163,
+      "locker_combination": "58-90-19",
+      "good_student": true,
+      "subjects": [5, 9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 67,
+    "fields": {
+      "name": "Maria O. Morris",
+      "student_email": "mariam@school.com",
+      "personal_email": "maria.morris67@gmail.com",
+      "locker_number": 188,
+      "locker_combination": "75-34-41",
+      "good_student": false,
+      "subjects": [2, 5]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 68,
+    "fields": {
+      "name": "Laura Y. Young",
+      "student_email": "lauray@school.com",
+      "personal_email": "laura.young68@gmail.com",
+      "locker_number": 157,
+      "locker_combination": "85-48-43",
+      "good_student": true,
+      "subjects": [3, 4, 8]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 69,
+    "fields": {
+      "name": "Amanda K. King",
+      "student_email": "amandak@school.com",
+      "personal_email": "amanda.king69@gmail.com",
+      "locker_number": 180,
+      "locker_combination": "35-71-01",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 70,
+    "fields": {
+      "name": "Donald N. Castillo",
+      "student_email": "donaldc@school.com",
+      "personal_email": "donald.castillo70@gmail.com",
+      "locker_number": 62,
+      "locker_combination": "88-60-82",
+      "good_student": true,
+      "subjects": [1]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 71,
+    "fields": {
+      "name": "Barbara H. Nguyen",
+      "student_email": "barbaran@school.com",
+      "personal_email": "barbara.nguyen71@gmail.com",
+      "locker_number": 170,
+      "locker_combination": "74-47-60",
+      "good_student": true,
+      "subjects": [9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 72,
+    "fields": {
+      "name": "Kevin W. Rivera",
+      "student_email": "kevinr@school.com",
+      "personal_email": "kevin.rivera72@gmail.com",
+      "locker_number": 60,
+      "locker_combination": "15-92-24",
+      "good_student": true,
+      "subjects": [3, 4]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 73,
+    "fields": {
+      "name": "Margaret P. Patel",
+      "student_email": "margaretp@school.com",
+      "personal_email": "margaret.patel73@gmail.com",
+      "locker_number": 151,
+      "locker_combination": "97-67-76",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 74,
+    "fields": {
+      "name": "Matthew H. Nguyen",
+      "student_email": "matthewn@school.com",
+      "personal_email": "matthew.nguyen74@gmail.com",
+      "locker_number": 78,
+      "locker_combination": "01-90-68",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 75,
+    "fields": {
+      "name": "Michael J. Peterson",
+      "student_email": "michaelp@school.com",
+      "personal_email": null,
+      "locker_number": 33,
+      "locker_combination": "81-96-62",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 76,
+    "fields": {
+      "name": "Andrew P. Stewart",
+      "student_email": "andrews@school.com",
+      "personal_email": "andrew.stewart76@gmail.com",
+      "locker_number": 48,
+      "locker_combination": "06-32-61",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 77,
+    "fields": {
+      "name": "Gary S. Martinez",
+      "student_email": "garym@school.com",
+      "personal_email": null,
+      "locker_number": 14,
+      "locker_combination": "19-19-72",
+      "good_student": false,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 78,
+    "fields": {
+      "name": "Ashley R. Thomas",
+      "student_email": "ashleyt@school.com",
+      "personal_email": null,
+      "locker_number": 159,
+      "locker_combination": "28-99-66",
+      "good_student": true,
+      "subjects": [5, 7, 10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 79,
+    "fields": {
+      "name": "Larry B. Richardson",
+      "student_email": "larryr@school.com",
+      "personal_email": null,
+      "locker_number": 190,
+      "locker_combination": "12-97-26",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 80,
+    "fields": {
+      "name": "David H. Lee",
+      "student_email": "davidl@school.com",
+      "personal_email": "david.lee80@gmail.com",
+      "locker_number": 20,
+      "locker_combination": "20-00-52",
+      "good_student": true,
+      "subjects": [5]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 81,
+    "fields": {
+      "name": "John J. Robinson",
+      "student_email": "johnr@school.com",
+      "personal_email": null,
+      "locker_number": 19,
+      "locker_combination": "87-29-33",
+      "good_student": true,
+      "subjects": [4, 7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 82,
+    "fields": {
+      "name": "Joseph H. Cooper",
+      "student_email": "josephc@school.com",
+      "personal_email": null,
+      "locker_number": 69,
+      "locker_combination": "18-09-07",
+      "good_student": true,
+      "subjects": [10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 83,
+    "fields": {
+      "name": "Andrew D. Cruz",
+      "student_email": "andrewc@school.com",
+      "personal_email": "andrew.cruz83@gmail.com",
+      "locker_number": 70,
+      "locker_combination": "64-69-63",
+      "good_student": true,
+      "subjects": [7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 84,
+    "fields": {
+      "name": "Jack T. Adams",
+      "student_email": "jacka@school.com",
+      "personal_email": "jack.adams84@gmail.com",
+      "locker_number": 24,
+      "locker_combination": "29-86-73",
+      "good_student": true,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 85,
+    "fields": {
+      "name": "Ruth I. Gray",
+      "student_email": "ruthg@school.com",
+      "personal_email": null,
+      "locker_number": 194,
+      "locker_combination": "22-60-66",
+      "good_student": true,
+      "subjects": [3, 7, 8]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 86,
+    "fields": {
+      "name": "Barbara L. Stewart",
+      "student_email": "barbaras@school.com",
+      "personal_email": "barbara.stewart86@gmail.com",
+      "locker_number": 83,
+      "locker_combination": "85-13-20",
+      "good_student": true,
+      "subjects": [5, 7]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 87,
+    "fields": {
+      "name": "Ruth B. Peterson",
+      "student_email": "ruthp@school.com",
+      "personal_email": "ruth.peterson87@gmail.com",
+      "locker_number": 81,
+      "locker_combination": "32-41-14",
+      "good_student": false,
+      "subjects": [9]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 88,
+    "fields": {
+      "name": "James R. James",
+      "student_email": "jamesj@school.com",
+      "personal_email": "james.james88@gmail.com",
+      "locker_number": 49,
+      "locker_combination": "66-46-79",
+      "good_student": true,
+      "subjects": [1, 4]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 89,
+    "fields": {
+      "name": "Paul E. Peterson",
+      "student_email": "paulp@school.com",
+      "personal_email": null,
+      "locker_number": 113,
+      "locker_combination": "89-62-15",
+      "good_student": true,
+      "subjects": [3, 4]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 90,
+    "fields": {
+      "name": "Michelle A. Peterson",
+      "student_email": "michellep@school.com",
+      "personal_email": null,
+      "locker_number": 30,
+      "locker_combination": "59-15-82",
+      "good_student": true,
+      "subjects": [5]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 91,
+    "fields": {
+      "name": "Shirley I. Price",
+      "student_email": "shirleyp@school.com",
+      "personal_email": "shirley.price91@gmail.com",
+      "locker_number": 124,
+      "locker_combination": "60-31-58",
+      "good_student": true,
+      "subjects": [10]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 92,
+    "fields": {
+      "name": "Shirley E. Myers",
+      "student_email": "shirleym@school.com",
+      "personal_email": null,
+      "locker_number": 71,
+      "locker_combination": "98-53-43",
+      "good_student": false,
+      "subjects": [1]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 93,
+    "fields": {
+      "name": "Andrew J. Castillo",
+      "student_email": "andrewc1@school.com",
+      "personal_email": null,
+      "locker_number": 149,
+      "locker_combination": "84-62-19",
+      "good_student": true,
+      "subjects": [6]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 94,
+    "fields": {
+      "name": "Stephen R. Ross",
+      "student_email": "stephenr@school.com",
+      "personal_email": "stephen.ross94@gmail.com",
+      "locker_number": 147,
+      "locker_combination": "49-29-99",
+      "good_student": true,
+      "subjects": [8]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 95,
+    "fields": {
+      "name": "Alexander M. Carter",
+      "student_email": "alexanderc@school.com",
+      "personal_email": null,
+      "locker_number": 39,
+      "locker_combination": "63-04-16",
+      "good_student": true,
+      "subjects": [2]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 96,
+    "fields": {
+      "name": "Jeffrey Q. Gonzalez",
+      "student_email": "jeffreyg@school.com",
+      "personal_email": null,
+      "locker_number": 4,
+      "locker_combination": "92-18-52",
+      "good_student": false,
+      "subjects": [2, 5, 8]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 97,
+    "fields": {
+      "name": "Carol W. Richardson",
+      "student_email": "carolr@school.com",
+      "personal_email": "carol.richardson97@gmail.com",
+      "locker_number": 21,
+      "locker_combination": "42-86-68",
+      "good_student": true,
+      "subjects": [8]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 98,
+    "fields": {
+      "name": "Helen T. Jones",
+      "student_email": "helenj@school.com",
+      "personal_email": "helen.jones98@gmail.com",
+      "locker_number": 162,
+      "locker_combination": "87-36-29",
+      "good_student": true,
+      "subjects": [2]
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 99,
+    "fields": {
+      "name": "Ruth W. Brooks",
+      "student_email": "ruthb@school.com",
+      "personal_email": null,
+      "locker_number": 114,
+      "locker_combination": "21-88-38",
+      "good_student": false,
+      "subjects": []
+    }
+  },
+  {
+    "model": "student_app.student",
+    "pk": 100,
+    "fields": {
+      "name": "Linda L. Nguyen",
+      "student_email": "lindan@school.com",
+      "personal_email": "linda.nguyen100@gmail.com",
+      "locker_number": 38,
+      "locker_combination": "31-67-52",
+      "good_student": true,
+      "subjects": [3, 10]
+    }
   }
-},
-{
-  "model": "student_app.student",
-  "pk": 2,
-  "fields": {
-    "name": "Matt j. Delen",
-    "student_email": "mat@school.com",
-    "personal_email": null,
-    "locker_number": 124,
-    "locker_combination": "73-46-54",
-    "good_student": true,
-    "subjects": []
-  }
-},
-{
-  "model": "student_app.student",
-  "pk": 3,
-  "fields": {
-    "name": "mike k. smith",
-    "student_email": "mike@school.com",
-    "personal_email": null,
-    "locker_number": 110,
-    "locker_combination": "12-12-12",
-    "good_student": true,
-    "subjects": []
-  }
-},
-{
-  "model": "student_app.student",
-  "pk": 4,
-  "fields": {
-    "name": "Jonny W. Wells",
-    "student_email": "th@school.com",
-    "personal_email": "th@gmail.com",
-    "locker_number": 20,
-    "locker_combination": "12-33-44",
-    "good_student": true,
-    "subjects": []
-  }
-},
-{
-  "model": "student_app.student",
-  "pk": 5,
-  "fields": {
-    "name": "John W. davis",
-    "student_email": "davis@school.com",
-    "personal_email": "yo@gmail.com",
-    "locker_number": 14,
-    "locker_combination": "12-12-12",
-    "good_student": true,
-    "subjects": []
-  }
-},
-{
-  "model": "student_app.student",
-  "pk": 6,
-  "fields": {
-    "name": "kelly M. Beck",
-    "student_email": "becca@school.com",
-    "personal_email": "qu@gmail.com",
-    "locker_number": 17,
-    "locker_combination": "12-12-12",
-    "good_student": true,
-    "subjects": []
-  }
-},
-{
-  "model": "student_app.student",
-  "pk": 7,
-  "fields": {
-    "name": "camion M. kah",
-    "student_email": "kag@school.com",
-    "personal_email": "kah@gmail.com",
-    "locker_number": 9,
-    "locker_combination": "12-12-12",
-    "good_student": true,
-    "subjects": []
-  }
-},
-{
-  "model": "student_app.student",
-  "pk": 8,
-  "fields": {
-    "name": "David M. Hickman",
-    "student_email": "dmh@school.com",
-    "personal_email": null,
-    "locker_number": 2,
-    "locker_combination": "12-12-12",
-    "good_student": true,
-    "subjects": []
-  }
-},
-{
-  "model": "student_app.student",
-  "pk": 9,
-  "fields": {
-    "name": "ali S. Gad",
-    "student_email": "ali@school.com",
-    "personal_email": "ali@gmail.com",
-    "locker_number": 101,
-    "locker_combination": "12-12-12",
-    "good_student": true,
-    "subjects": [
-      1,
-      2
-    ]
-  }
-},
-{
-  "model": "student_app.student",
-  "pk": 10,
-  "fields": {
-    "name": "Alice M. Johnson",
-    "student_email": "alice@school.com",
-    "personal_email": "alice@gmail.com",
-    "locker_number": 102,
-    "locker_combination": "12-12-12",
-    "good_student": true,
-    "subjects": [
-      1,
-      3
-    ]
-  }
-},
-{
-  "model": "student_app.student",
-  "pk": 11,
-  "fields": {
-    "name": "Michael R. Carter",
-    "student_email": "michael@school.com",
-    "personal_email": "michael@gmail.com",
-    "locker_number": 103,
-    "locker_combination": "12-12-12",
-    "good_student": true,
-    "subjects": [
-      3
-    ]
-  }
-}
 ]
