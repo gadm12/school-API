@@ -1,4 +1,4 @@
-from django.urls import path,register_converter
+from django.urls import path, register_converter
 from .views import AllStudents, AStudent
 
 
@@ -16,5 +16,5 @@ register_converter(IntOrStrConverter, "int_str")
 
 urlpatterns = [
     path("", AllStudents.as_view(), name="all_students"),
-    path("<int_str:id>", AStudent.as_view(), name="a_student"),
+    path("<int:id>/", AStudent.as_view(), name="a_student"),
 ]
