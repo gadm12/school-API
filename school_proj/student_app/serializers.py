@@ -7,6 +7,7 @@ class StudentSerializer(ModelSerializer):
     class Meta:
         model = Student
         fields = [
+            "id",
             "name",
             "student_email",
             "locker_number",
@@ -19,6 +20,24 @@ class StudentAllSerializer(ModelSerializer):
     class Meta:
         model = Student
         fields = [
+            "id",
+            "name",
+            "student_email",
+            "personal_email",
+            "locker_number",
+            "locker_combination",
+            "good_student",
+            "subjects",
+        ]
+
+
+class StudentDetailSerializer(ModelSerializer):
+    subjects = SubjectSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Student
+        fields = [
+            "id",
             "name",
             "student_email",
             "personal_email",

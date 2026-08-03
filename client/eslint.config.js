@@ -30,9 +30,4 @@ export default defineConfig([
       "no-unused-vars": "warn",
     },
   },
-
-  {
-    files: ["cypress/**/*.{js,jsx}"],
-    extends: [cypress.configs.recommended],
-  },
 ]);
