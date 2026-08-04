@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "../components /Button";
+import Button from "../components/Button";
 
 export default function HomePage() {
   const [students, setStudents] = useState(null);
@@ -54,11 +54,7 @@ export default function HomePage() {
   return (
     <>
       <div className="mx-auto mt-10 max-w-2xl px-4">
-        <h1 className="mb-8 text-center text-4xl font-bold text-gray-800">
-          Code Platoon School API
-        </h1>
         <Button onClick={createStudent}>create Student</Button>
-        
 
         <ul className="space-y-3">
           {students.map((item) => (

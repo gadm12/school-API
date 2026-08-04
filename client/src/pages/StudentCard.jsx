@@ -2,23 +2,27 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import Button from "../components /Button";
+import Button from "../components/Button";
+import StudentEditForm from "../components/StudentEditForm";
+import StudentInfo from "../components/StudentInfo";
+import SubjectList from "../components/SubjectList";
+
+const emptyForm = {
+  name: "",
+  student_email: "",
+  personal_email: "",
+  locker_number: "",
+  locker_combination: "",
+  good_student: false,
+};
 
 export default function StudentCard() {
   const [student, setStudent] = useState(null);
+  const [formData, setFormData] = useState(emptyForm);
   const [error, setError] = useState(null);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    student_email: "",
-    personal_email: "",
-    locker_number: "",
-    locker_combination: "",
-    good_student: false,
-  });
-
-  const navigate = useNavigate();
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getStudentInfo = async () => {
@@ -30,7 +34,6 @@ export default function StudentCard() {
         const studentData = response.data;
 
         setStudent(studentData);
-
         setFormData({
           name: studentData.name,
           student_email: studentData.student_email,
@@ -48,30 +51,18 @@ export default function StudentCard() {
     getStudentInfo();
   }, [id]);
 
-  const handleChange = (event) => {
-    const { name, value, type, checked } = event.target;
-
-    setFormData((current) => ({
-      ...current,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
+  const updateStudent = async (updatedFormData) => {
     try {
       const response = await axios.put(
         `http://127.0.0.1:8001/api/v1/students/${student.id}/`,
         {
-          ...formData,
-          locker_number: Number(formData.locker_number),
-          personal_email: formData.personal_email || null,
+          ...updatedFormData,
+          locker_number: Number(updatedFormData.locker_number),
+          personal_email: updatedFormData.personal_email || null,
         },
       );
 
       setStudent(response.data);
-
       setFormData({
         name: response.data.name,
         student_email: response.data.student_email,
@@ -109,138 +100,15 @@ export default function StudentCard() {
 
   return (
     <>
-      <div className="mx-auto mt-8 w-80 rounded-lg border bg-white p-6 shadow">
-        <h2 className="mb-4 text-center text-2xl font-bold">{student.name}</h2>
+      <StudentInfo student={student} />
 
-        <p className="mb-2">
-          <strong>Student Email:</strong> {student.student_email}
-        </p>
+      <SubjectList subjects={student.subjects} />
 
-        <p className="mb-4">
-          <strong>Locker Number:</strong> {student.locker_number}
-        </p>
-
-        <h3 className="mb-3 text-lg font-semibold">Subjects</h3>
-
-        <div className="space-y-3">
-          {student.subjects.map((subject) => (
-            <div
-              key={subject.subject_name}
-              className="rounded-md border border-black p-3 shadow-sm"
-            >
-              <p>
-                <strong>{subject.subject_name}</strong>
-              </p>
-
-              <p>Professor: {subject.professor}</p>
-              <p>Students: {subject.students}</p>
-              <p>Grade Average: {subject.grade_average}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <form
-        onSubmit={handleSubmit}
-        className="mx-auto mt-6 max-w-md space-y-4 rounded-lg border bg-white p-6 shadow"
-      >
-        <h3 className="text-xl font-bold">Edit Student</h3>
-
-        <div>
-          <label htmlFor="name" className="mb-1 block font-semibold">
-            Name
-          </label>
-
-          <input
-            id="name"
-            name="name"
-            type="text"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full rounded border px-3 py-2"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="student_email" className="mb-1 block font-semibold">
-            Student Email
-          </label>
-
-          <input
-            id="student_email"
-            name="student_email"
-            type="email"
-            value={formData.student_email}
-            onChange={handleChange}
-            className="w-full rounded border px-3 py-2"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="personal_email" className="mb-1 block font-semibold">
-            Personal Email
-          </label>
-
-          <input
-            id="personal_email"
-            name="personal_email"
-            type="email"
-            value={formData.personal_email}
-            onChange={handleChange}
-            className="w-full rounded border px-3 py-2"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="locker_number" className="mb-1 block font-semibold">
-            Locker Number
-          </label>
-
-          <input
-            id="locker_number"
-            name="locker_number"
-            type="number"
-            value={formData.locker_number}
-            onChange={handleChange}
-            className="w-full rounded border px-3 py-2"
-          />
-        </div>
-
-        <div>
-          <label
-            htmlFor="locker_combination"
-            className="mb-1 block font-semibold"
-          >
-            Locker Combination
-          </label>
-
-          <input
-            id="locker_combination"
-            name="locker_combination"
-            type="text"
-            value={formData.locker_combination}
-            onChange={handleChange}
-            className="w-full rounded border px-3 py-2"
-          />
-        </div>
-
-        <label className="flex items-center gap-2">
-          <input
-            name="good_student"
-            type="checkbox"
-            checked={formData.good_student}
-            onChange={handleChange}
-          />
-          Good Student
-        </label>
-
-        <Button
-          type="submit"
-          className="w-full rounded bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700"
-        >
-          Save Changes
-        </Button>
-      </form>
+      <StudentEditForm
+        formData={formData}
+        setFormData={setFormData}
+        onSubmit={updateStudent}
+      />
 
       <div className="mx-auto mt-4 flex max-w-md justify-center">
         <Button

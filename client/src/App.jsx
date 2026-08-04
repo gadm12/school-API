@@ -1,6 +1,5 @@
-
+import NavBar from "./components/NavBar/NavBar";
 import "./index.css";
-
 
 // import NavBar from "./components/NavBar/NavBar";
 import { Outlet } from "react-router-dom";
@@ -8,7 +7,7 @@ import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-      {/* <NavBar /> */}
+      <NavBar />
       <Outlet />
     </>
   );

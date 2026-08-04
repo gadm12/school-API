@@ -1,14 +1,14 @@
 
 
 
-export default function NavBar() {
+export default function RegisterPage() {
        
        //!code
        
   return (
     <>
        
-      //? html
+      <h1>Register</h1>
        
     </>
   );
