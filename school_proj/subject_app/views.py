@@ -1,3 +1,5 @@
+
+
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -14,6 +16,10 @@ class AllSubjects(APIView):
 
 
 class ASubject(APIView):
+
+    def retrieve_subject(self, request, subject):
+        return get_object_or_404(Subject, subject=subject)
+
     def get(self, request, subject):
         a_subject = get_object_or_404(
             Subject,

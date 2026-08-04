@@ -10,6 +10,7 @@ class SubjectSerializer(ModelSerializer):
     class Meta:
         model = Subject
         fields = [
+            "id",
             "subject_name",
             "professor",
             "students",
