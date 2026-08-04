@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Button from "../components /Button";
 
 export default function HomePage() {
   const [students, setStudents] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const getStudentData = async () => {
@@ -21,6 +23,29 @@ export default function HomePage() {
 
     getStudentData();
   }, []);
+  const createStudent = async () => {
+    try {
+      const response = await axios.post(
+        `http://127.0.0.1:8001/api/v1/students/`,
+        {
+          name: "Robert J. Miller",
+          student_email: "robert@school.com",
+          personal_email: "robert@gmail.com",
+          locker_number: 63,
+        },
+      );
+
+      setStudents((currentStudents) => [...currentStudents, response.data]);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error.response?.data || error.message);
+      setError("Could not update the student.");
+    }
+  };
+
+  if (error) {
+    return <p>{error}</p>;
+  }
 
   if (!students) {
     return <span>spinning</span>;
@@ -32,6 +57,8 @@ export default function HomePage() {
         <h1 className="mb-8 text-center text-4xl font-bold text-gray-800">
           Code Platoon School API
         </h1>
+        <Button onClick={createStudent}>create Student</Button>
+        
 
         <ul className="space-y-3">
           {students.map((item) => (
@@ -44,8 +71,6 @@ export default function HomePage() {
                 className="flex items-center justify-between px-5 py-4 font-semibold text-gray-800 hover:text-blue-600"
               >
                 <span>{item.name}</span>
-
-                
               </Link>
             </li>
           ))}
