@@ -21,6 +21,8 @@ from django.http import HttpResponse
 import math
 
 
+
+
 def hello(request):
 
     return HttpResponse("hello world")
@@ -44,4 +46,5 @@ urlpatterns = [
     path("circle/<int:radius>/", circle_radius),
     path("api/v1/students/",include("student_app.urls")),
     path("api/v1/subjects/",include("subject_app.urls")),
+    path('api/v1/accounts',include("accounts.urls"))
 ]

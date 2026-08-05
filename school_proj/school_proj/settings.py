@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "student_app",
     "subject_app",
     "grade_app",
+    "accounts",
     "rest_framework",
     "corsheaders",
 ]
@@ -88,7 +89,7 @@ DATABASES = {
         "PORT": "5432",
     }
 }
-
+AUTH_USER_MODEL = 'accounts.Accounts'
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
