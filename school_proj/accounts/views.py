@@ -1,3 +1,5 @@
+import email
+
 from django.shortcuts import render
 from rest_framework.views import APIView
 from .models import Accounts
@@ -59,9 +61,21 @@ class LoginView(APIView):
         )
 
 
-class LogOutView(APIView):
+class UserView(APIView):
     permission_classes = [IsAuthenticated]
+
+
+class LogOutView(UserView):
 
     def post(self, request):
         request.user.auth_token.delete()
         return Response({"message": "Successfully logged out."})
+
+
+class InfoView(UserView):
+
+    def get(self, request):
+        user = request.user
+        return Response(
+            {"email": user.email, "date_joined": user.date_joined}
+        )

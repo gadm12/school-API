@@ -14,14 +14,11 @@ ORM-Query-Cheatsheet.png
 req-res-anat.png
 Request-response-guide-django.png
 my_django_2.md
+djandreact.md
+my_django_2.md
 
-<<<<<<< HEAD
-__pycache__/
-*.py[cod]
-=======
 # Byte-compiled files
 __pycache__/
 *.py[cod]
 *$py.class
->>>>>>> feature/baseview
 
