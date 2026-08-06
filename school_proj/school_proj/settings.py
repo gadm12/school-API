@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "grade_app",
     "accounts",
     "rest_framework",
+    "rest_framework.authtoken",
     "corsheaders",
 ]
 
@@ -89,7 +90,14 @@ DATABASES = {
         "PORT": "5432",
     }
 }
-AUTH_USER_MODEL = 'accounts.Accounts'
+# gives the function authentication
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication"
+    ]
+}
+
+AUTH_USER_MODEL = "accounts.Accounts"
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators

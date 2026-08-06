@@ -14,6 +14,8 @@ export default function RegisterPage() {
   };
   registerUser();
 
+  
+
   return (
     <>
       <h1>Register</h1>

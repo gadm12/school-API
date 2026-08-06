@@ -13,4 +13,6 @@ def validate_professor_name(val: str):
     pattern = r"^Professor [A-Z][a-zA-Z]*$"
 
     if not re.fullmatch(pattern, val):
-        raise ValidationError('Professor name must be in the format "Professor Adam".')
+        raise ValidationError(
+            'Professor name must be in the format "Professor Adam".'
+        )

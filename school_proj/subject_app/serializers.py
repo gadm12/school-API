@@ -1,6 +1,10 @@
-from rest_framework.serializers import ModelSerializer, SerializerMethodField
+from rest_framework.serializers import (
+    ModelSerializer,
+    SerializerMethodField,
+)
 from subject_app.models import Subject
 from decimal import Decimal, ROUND_HALF_UP
+
 
 
 class SubjectSerializer(ModelSerializer):

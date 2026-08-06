@@ -4,6 +4,7 @@ content.md
 regex-cheatsheet.png
 .venv/
 my_django.md
+z_require/
 
 lecture_transcript/
 
@@ -23,3 +24,4 @@ __pycache__/
 *.py[cod]
 *$py.class
 >>>>>>> feature/baseview
+
