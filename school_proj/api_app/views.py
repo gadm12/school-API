@@ -5,7 +5,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.throttling import UserRateThrottle
 from rest_framework.throttling import AnonRateThrottle
+from django.core.cache import cache
 from rich import print
+
+CACHE_TTL = 1
 
 
 class BookUserRateThrottle(UserRateThrottle):
@@ -25,22 +28,39 @@ class BookProject(APIView):
     ]
 
     def get(self, request):
-        print("🔥 BOOK VIEW WAS CALLED")
         query = request.query_params.get("q", "django")
+
+        cache_key = f"books:{query.lower().strip()}"
+        cached_books = cache.get(cache_key)
+
+        if cached_books is not None:
+            print("✅✅✅ CACHE HIT ✅✅✅")
+            return Response(cached_books)
+
+        print("❌❌❌ CACHE MISS ❌❌❌")
+
         api_key = os.getenv("GOOGLE_BOOKS_API_KEY")
         endpoint = "https://www.googleapis.com/books/v1/volumes"
 
-        response = requests.get(
-            endpoint,
-            params={
-                "q": query,
-                "key": api_key,
-                "maxResults": 10,
-            },
-            timeout=10,
-        )
+        try:
+            response = requests.get(
+                endpoint,
+                params={
+                    "q": query,
+                    "key": api_key,
+                    "maxResults": 10,
+                },
+                timeout=10,
+            )
 
-        response.raise_for_status()
+            response.raise_for_status()
+
+        except requests.RequestException:
+            return Response(
+                {"error": "Google Books service is temporarily unavailable."},
+                status=503,
+            )
+
         google_data = response.json()
 
         books = []
@@ -59,20 +79,15 @@ class BookProject(APIView):
                     "preview_link": info.get("previewLink"),
                 }
             )
-        print(
-            {
-                "query": query,
-                "count": len(books),
-                "books": books,
-            }
-        )
-        return Response(
-            {
-                "query": query,
-                "count": len(books),
-                "books": books,
-            }
-        )
+
+        data = {
+            "query": query,
+            "count": len(books),
+            "books": books,
+        }
+        cache.set(cache_key, data, timeout=CACHE_TTL)
+        print(data)
+        return Response(data)
 
 
 # from django.shortcuts import render
