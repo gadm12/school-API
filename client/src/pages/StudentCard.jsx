@@ -28,7 +28,7 @@ export default function StudentCard() {
     const getStudentInfo = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:8001/api/v1/students/${id}/`,
+          `http://127.0.0.1:8000/api/v1/students/${id}/`,
         );
 
         const studentData = response.data;
@@ -54,7 +54,7 @@ export default function StudentCard() {
   const updateStudent = async (updatedFormData) => {
     try {
       const response = await axios.put(
-        `http://127.0.0.1:8001/api/v1/students/${student.id}/`,
+        `http://127.0.0.1:8000/api/v1/students/${student.id}/`,
         {
           ...updatedFormData,
           locker_number: Number(updatedFormData.locker_number),
@@ -80,7 +80,7 @@ export default function StudentCard() {
   const deleteStudent = async () => {
     try {
       await axios.delete(
-        `http://127.0.0.1:8001/api/v1/students/${student.id}/`,
+        `http://127.0.0.1:8000/api/v1/students/${student.id}/`,
       );
 
       navigate("/");

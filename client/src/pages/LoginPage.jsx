@@ -1,18 +1,18 @@
 import axios from "axios";
 
 export default function LoginPage() {
-
-
   const LoginUser = async () => {
     try {
-      const response = await axios.post(`http://127.0.0.1:8001/api/v1/accounts/login`);
+      const response = await axios.post(
+        `http://127.0.0.1:8000/api/v1/accounts/login`,
+      );
 
       console.log(response.data);
     } catch (error) {
       console.error(error.response?.data || error.message);
     }
   };
-  LoginUser()
+  LoginUser();
 
   return (
     <>

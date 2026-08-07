@@ -4,7 +4,7 @@ export default function RegisterPage() {
   const registerUser = async () => {
     try {
       const response = await axios.post(
-        `http://127.0.0.1:8001/api/v1/accounts/register`,
+        `http://127.0.0.1:8000/api/v1/accounts/register`,
       );
 
       console.log(response.data);
@@ -13,8 +13,6 @@ export default function RegisterPage() {
     }
   };
   registerUser();
-
-  
 
   return (
     <>
