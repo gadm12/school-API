@@ -5,6 +5,7 @@ from rest_framework import status
 from .models import Student
 from .serializers import StudentAllSerializer
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.throttling import UserRateThrottle
 
 # Create your views here.
 
@@ -12,6 +13,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 class AllStudents(APIView):
 
     permission_classes = [IsAuthenticatedOrReadOnly]
+    throttle_classes = [UserRateThrottle]
 
     def get(self, request):
         students = Student.objects.all().order_by("id")
@@ -33,6 +35,7 @@ class AllStudents(APIView):
 class AStudent(APIView):
 
     permission_classes = [IsAuthenticatedOrReadOnly]
+    throttle_classes = [UserRateThrottle]
 
     def retrieve_student(self, id):
 
