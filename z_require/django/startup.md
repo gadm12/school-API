@@ -1,6 +1,5 @@
 # Environment Setup
 
-
 1. deactivate your default and create .venv
 
 ```bash
@@ -19,6 +18,7 @@ source .venv/bin/activate
 2. echo to .gitignore
 
 ```bash
+echo "" >> .gitignore
 echo ".venv/" >> .gitignore
 echo "__pycache__/" >> .gitignore
 echo "*.py[cod]" >> .gitignore
@@ -100,7 +100,8 @@ usufel command
 tree -a -L 2
 tree -L 2
 
-premission issue 
+premission issue
+
 ```bash
 ls -l proj_root/
 sudo chown -R $USER:$USER proj_root/api_app

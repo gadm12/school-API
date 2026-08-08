@@ -29,3 +29,25 @@ __pycache__/
 
 __pycache__/
 *.py[cod]
+
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+.env.*
+.vscode/
+.idea/
+node_modules/
+dist/
+build/
+.DS_Store
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.cache/
+*Zone.Identifier*
+client/node_modules/
