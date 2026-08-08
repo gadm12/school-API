@@ -4,9 +4,10 @@ content.md
 regex-cheatsheet.png
 .venv/
 my_django.md
+z_require/
 
 lecture_transcript/
-
+tes/
 starting.md
 djando-set-up-info-graphic.png
 ORM-Query-Cheatsheet.png
@@ -15,3 +16,16 @@ Request-response-guide-django.png
 my_django_2.md
 
 .env
+djandreact.md
+my_django_2.md
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+.env
+*Zone.Identifier*
+
+__pycache__/
+*.py[cod]
