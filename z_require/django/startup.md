@@ -18,27 +18,45 @@ source .venv/bin/activate
 2. echo to .gitignore
 
 ```bash
-echo "" >> .gitignore
-echo ".venv/" >> .gitignore
-echo "__pycache__/" >> .gitignore
-echo "*.py[cod]" >> .gitignore
-echo "*.sqlite3" >> .gitignore
-echo ".env" >> .gitignore
-echo ".env.*" >> .gitignore
-echo ".vscode/" >> .gitignore
-echo ".idea/" >> .gitignore
-echo "node_modules/" >> .gitignore
-echo "dist/" >> .gitignore
-echo "build/" >> .gitignore
-echo ".DS_Store" >> .gitignore
-echo "*.log" >> .gitignore
-echo ".pytest_cache/" >> .gitignore
-echo ".coverage" >> .gitignore
-echo "htmlcov/" >> .gitignore
-echo ".mypy_cache/" >> .gitignore
-echo ".ruff_cache/" >> .gitignore
-echo ".cache/" >> .gitignore
-echo "*Zone.Identifier*" >> .gitignore
+cat >> .gitignore << 'EOF'
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Environment Variables
+.env
+.env.*
+
+# Testing / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Linters / Type Checking / Cache
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# Node / React
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# Operating System Files
+.DS_Store
+*Zone.Identifier*
+EOF
+
 ```
 
 3. pip install your requirements
@@ -106,3 +124,48 @@ premission issue
 ls -l proj_root/
 sudo chown -R $USER:$USER proj_root/api_app
 ```
+
+to check on .env
+
+```bash
+git ls-files | grep -E '(^|/)\.env($|\.)'
+```
+
+```
+pm shell
+>>> Cart_item._meta.get_fields()
+```
+
+```python
+cart = {}  # dict: item_id -> quantity
+
+def add_item(item_id, quantity):
+    cart[item_id] = cart.get(item_id, 0) + quantity
+```
+
+same thing the above is for dict below is for
+
+```python
+def add_item(self, cart_item_id, quantity=1):
+    item = Item.objects.get(id=cart_item_id)
+    cart_item, created = Cart_item.objects.get_or_create(
+        cart=self, item=item, defaults={"quantity": quantity}
+    )
+    if not created:
+        cart_item.quantity += quantity
+        cart_item.save()
+    return cart_item
+```
+
+DATABASES = {
+"default": {
+"ENGINE": "django.db.backends.postgresql",
+"NAME": os.environ.get("POSTGRES_DB", "ecom_db"),
+"USER": os.environ.get("POSTGRES_USER", "runner"),
+"PASSWORD": os.environ.get("POSTGRES_PASSWORD", ""),
+"HOST": os.environ.get("POSTGRES_HOST", "localhost"),
+"PORT": os.environ.get("POSTGRES_PORT", "5432"),
+}
+}
+
+git show HEAD:ecom_proj/ecom_proj/settings.py | grep -A8 DATABASES
