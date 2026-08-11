@@ -10,7 +10,7 @@ export default function SubjectPage() {
     const getSubjectsData = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8001/api/v1/subjects/",
+          "http://127.0.0.1:8000/api/v1/subjects/",
         );
 
         setSubjects(response.data);
@@ -43,10 +43,7 @@ export default function SubjectPage() {
             key={item.id}
             className="rounded-lg border border-gray-300 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           >
-            <Link
-              to={`/subjects/${item.id}`}
-              className="block px-4 py-3"
-            >
+            <Link to={`/subjects/${item.id}`} className="block px-4 py-3">
               {item.subject_name}
             </Link>
           </li>

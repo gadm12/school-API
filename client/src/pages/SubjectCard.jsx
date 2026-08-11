@@ -12,7 +12,7 @@ export default function SubjectCard() {
     const getSubjectData = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:8001/api/v1/subjects/${id}/`,
+          `http://127.0.0.1:8000/api/v1/subjects/${id}/`,
         );
 
         setSubjectData(response.data);

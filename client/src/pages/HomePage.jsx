@@ -26,7 +26,7 @@ export default function HomePage() {
   const createStudent = async () => {
     try {
       const response = await axios.post(
-        `http://127.0.0.1:8001/api/v1/students/`,
+        `http://127.0.0.1:8000/api/v1/students/`,
         {
           name: "Robert J. Miller",
           student_email: "robert@school.com",
@@ -42,6 +42,7 @@ export default function HomePage() {
       setError("Could not update the student.");
     }
   };
+
 
   if (error) {
     return <p>{error}</p>;

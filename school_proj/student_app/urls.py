@@ -2,17 +2,17 @@ from django.urls import path, register_converter
 from .views import AllStudents, AStudent
 
 
-class IntOrStrConverter:
-    regex = r"[0-9]+|[a-zA-Z]+"
+# class IntOrStrConverter:
+#     regex = r"[0-9]+|[a-zA-Z]+"
 
-    def to_python(self, value):
-        return int(value) if value.isdigit() else value
+#     def to_python(self, value):
+#         return int(value) if value.isdigit() else value
 
-    def to_url(self, value):
-        return str(value)
+#     def to_url(self, value):
+#         return str(value)
 
 
-register_converter(IntOrStrConverter, "int_str")
+# register_converter(IntOrStrConverter, "int_str")
 
 urlpatterns = [
     path("", AllStudents.as_view(), name="all_students"),

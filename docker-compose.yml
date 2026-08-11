@@ -31,14 +31,15 @@ services:
       - db
       - redis
 
-  nginx:
-    image: nginx:alpine
-    container_name: nginx-container
+  frontend:
+    build: ./client
+    container_name: react-container
+    command: npm run dev -- --host 0.0.0.0
     ports:
-      - "80:80"
+      - "5173:5173"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./client/dist:/usr/share/nginx/html
+      - ./client:/app
+      - /app/node_modules
     depends_on:
       - backend
 
