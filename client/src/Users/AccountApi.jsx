@@ -18,7 +18,7 @@ const errorMessage = (error) => {
   return typeof data === "string" ? data : JSON.stringify(data);
 };
 
-// Do not make login and register one function as below
+// Do not make login and register in one function as below
 
 export const userAuth = async (email, password, register) => {
   try {
@@ -33,4 +33,29 @@ export const userAuth = async (email, password, register) => {
     console.error(error.response?.data || error.message);
     return null;
   }
+};
+
+export const userConfirmation = async () => {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    return null;
+  }
+  try {
+    const response = await account.get("")
+    response.data.email
+  } catch (error) {
+    localStorage.removeItem("token")
+    console.error(error.response?.data || error.message);
+    return null;
+  }
+};
+
+export const userLogOut = async () => {
+  try {
+    await account.post("logout/")
+  } catch (error) {
+    console.error("logout request failed",error.response?.data || error.message);
+  }
+  localStorage.removeItem("token")
+  return null
 };

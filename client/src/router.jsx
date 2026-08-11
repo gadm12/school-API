@@ -4,30 +4,32 @@ import HomePage from "./pages/HomePage";
 import StudentCard from "./pages/StudentCard";
 import SubjectPage from "./pages/SubjectPage";
 import SubjectCard from "./pages/SubjectCard";
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
+// import RegisterPage from "./pages/RegisterPage";
+import AuthForm from "./components/AuthForm/AuthForm";
 // import NotFoundPage from "./Pages/NotFoundPage";
 // import AboutPage from "./Pages/AboutPage";
-// import ErrorPage from "./pages/ErrorPage";
+import ErrorPage from "./pages/ErrorPage";
+import { userConfirmation } from "./Users/AccountApi";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // errorElement: <ErrorPage />,
+    loader: userConfirmation,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
+        element: <AuthForm/>,
+      },
+      {
+        path: "home",
         element: <HomePage />,
       },
-      {
-        path: "login",
-        element: <LoginPage />,
-      },
-      {
-        path: "register",
-        element: <RegisterPage />,
-      },
+      // {
+      //   path: "register",
+      //   element: <RegisterPage />,
+      // },
 
       {
         path: "students/:id",

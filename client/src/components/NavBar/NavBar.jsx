@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../Button";
+import { userLogOut } from "../../Users/AccountApi";
 
-export default function NavBar() {
+export default function NavBar({ user, setUser }) {
   const [searchStudent, setSearchStudent] = useState("");
   const navigate = useNavigate();
 
@@ -13,15 +14,29 @@ export default function NavBar() {
     setSearchStudent("");
   };
 
+  const handleLogOut = async () => {
+    setUser(await userLogOut());
+    navigate("/");
+  };
+  
+
   return (
     <>
       <div className="mx-auto mb-8 flex max-w-5xl items-center rounded-lg bg-white p-4 shadow">
         <h3 className="text-2xl font-bold text-gray-800">
           Code Platoon School API
         </h3>
-
+        <h1 className="ml-6 flex items-center gap-3 font-semibold text-gray-700">
+          Welcome <span className="text-blue-600">{user}</span>
+          <button
+            onClick={handleLogOut}
+            className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-red-700"
+          >
+            Log Out
+          </button>
+        </h1>
         <nav className="ml-6 flex gap-2">
-          <Link to="/">
+          <Link to="/home">
             <Button>Home</Button>
           </Link>
 

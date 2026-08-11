@@ -6,6 +6,7 @@ import Button from "../components/Button";
 export default function HomePage() {
   const [students, setStudents] = useState(null);
   const [error, setError] = useState(null);
+  
 
   useEffect(() => {
     const getStudentData = async () => {
@@ -51,10 +52,12 @@ export default function HomePage() {
   if (!students) {
     return <span>spinning</span>;
   }
+  
 
   return (
     <>
       <div className="mx-auto mt-10 max-w-2xl px-4">
+      
         <Button onClick={createStudent}>create Student</Button>
 
         <ul className="space-y-3">

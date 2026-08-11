@@ -1,14 +1,15 @@
 import NavBar from "./components/NavBar/NavBar";
 import "./index.css";
-import { Outlet } from "react-router-dom";
-import { account } from "./Users/AccountApi";
+import { Outlet, useLoaderData } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const loaderUser = useLoaderData();
+  const [user, setUser] = useState(loaderUser);
   return (
     <>
-      <NavBar />
-      <Outlet />
-      
+      <NavBar user={user} setUser={setUser} />
+      <Outlet context={{ user, setUser }} />
     </>
   );
 }
