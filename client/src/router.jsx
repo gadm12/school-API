@@ -9,7 +9,11 @@ import AuthForm from "./components/AuthForm/AuthForm";
 // import NotFoundPage from "./Pages/NotFoundPage";
 // import AboutPage from "./Pages/AboutPage";
 import ErrorPage from "./pages/ErrorPage";
-import { userConfirmation } from "./Users/AccountApi";
+import {
+  redirectIfLoggedIn,
+  requireLogin,
+  userConfirmation,
+} from "./Users/AccountApi";
 
 const router = createBrowserRouter([
   {
@@ -20,11 +24,13 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <AuthForm/>,
+        element: <AuthForm />,
+        loader: redirectIfLoggedIn,
       },
       {
         path: "home",
         element: <HomePage />,
+        loader: requireLogin,
       },
       // {
       //   path: "register",

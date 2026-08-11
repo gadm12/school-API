@@ -1,11 +1,10 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
 import Button from "../components/Button";
 import StudentEditForm from "../components/StudentEditForm";
 import StudentInfo from "../components/StudentInfo";
 import SubjectList from "../components/SubjectList";
+import { account } from "../Users/AccountApi";
 
 const emptyForm = {
   name: "",
@@ -27,8 +26,8 @@ export default function StudentCard() {
   useEffect(() => {
     const getStudentInfo = async () => {
       try {
-        const response = await axios.get(
-          `http://127.0.0.1:8000/api/v1/students/${id}/`,
+        const response = await account.get(
+          `students/${id}/`,
         );
 
         const studentData = response.data;
@@ -39,11 +38,14 @@ export default function StudentCard() {
           student_email: studentData.student_email,
           personal_email: studentData.personal_email ?? "",
           locker_number: studentData.locker_number,
-          locker_combination: studentData.locker_combination,
+          locker_combination:
+            studentData.locker_combination,
           good_student: studentData.good_student,
         });
       } catch (error) {
-        console.error(error.response?.data || error.message);
+        console.error(
+          error.response?.data || error.message,
+        );
         setError("Could not load the student.");
       }
     };
@@ -53,12 +55,15 @@ export default function StudentCard() {
 
   const updateStudent = async (updatedFormData) => {
     try {
-      const response = await axios.put(
-        `http://127.0.0.1:8000/api/v1/students/${student.id}/`,
+      const response = await account.put(
+        `students/${student.id}/`,
         {
           ...updatedFormData,
-          locker_number: Number(updatedFormData.locker_number),
-          personal_email: updatedFormData.personal_email || null,
+          locker_number: Number(
+            updatedFormData.locker_number,
+          ),
+          personal_email:
+            updatedFormData.personal_email || null,
         },
       );
 
@@ -68,7 +73,8 @@ export default function StudentCard() {
         student_email: response.data.student_email,
         personal_email: response.data.personal_email ?? "",
         locker_number: response.data.locker_number,
-        locker_combination: response.data.locker_combination,
+        locker_combination:
+          response.data.locker_combination,
         good_student: response.data.good_student,
       });
     } catch (error) {
@@ -79,9 +85,7 @@ export default function StudentCard() {
 
   const deleteStudent = async () => {
     try {
-      await axios.delete(
-        `http://127.0.0.1:8000/api/v1/students/${student.id}/`,
-      );
+      await account.delete(`students/${student.id}/`);
 
       navigate("/");
     } catch (error) {

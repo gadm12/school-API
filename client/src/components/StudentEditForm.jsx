@@ -1,6 +1,10 @@
 import Button from "./Button";
 
-export default function StudentEditForm({ formData, setFormData, onSubmit }) {
+export default function StudentEditForm({
+  formData,
+  setFormData,
+  onSubmit,
+}) {
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
 

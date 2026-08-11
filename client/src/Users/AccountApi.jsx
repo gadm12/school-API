@@ -1,7 +1,8 @@
 import axios from "axios";
+import { redirect } from "react-router-dom";
 
 export const account = axios.create({
-  baseURL: "http://127.0.0.1:8000/api/v1/accounts/",
+  baseURL: "http://127.0.0.1:8000/api/v1/",
 });
 
 account.interceptors.request.use((config) => {
@@ -15,23 +16,32 @@ account.interceptors.request.use((config) => {
 const errorMessage = (error) => {
   const data = error.response?.data;
   if (!data) return "could not reach the server.";
-  return typeof data === "string" ? data : JSON.stringify(data);
+  return typeof data === "string"
+    ? data
+    : JSON.stringify(data);
 };
 
 // Do not make login and register in one function as below
 
-export const userAuth = async (email, password, register) => {
+export const userAuth = async (
+  email,
+  password,
+  register,
+) => {
   try {
-    const response = await account.post(register ? "register/" : "login/", {
-      email: email,
-      password: password,
-    });
-    const { email: userEmail, token: token } = response.data;
+    const response = await account.post(
+      register ? "accounts/register/" : "accounts/login/",
+      {
+        email: email,
+        password: password,
+      },
+    );
+    const { user, token } = response.data;
     localStorage.setItem("token", token);
-    return userEmail;
+    return user;
   } catch (error) {
-    console.error(error.response?.data || error.message);
-    return null;
+    console.error(errorMessage(error));
+    return { user: null, error: errorMessage(error) };
   }
 };
 
@@ -41,21 +51,37 @@ export const userConfirmation = async () => {
     return null;
   }
   try {
-    const response = await account.get("")
-    response.data.email
+    const response = await account.get("accounts/");
+    return response.data.email;
   } catch (error) {
-    localStorage.removeItem("token")
-    console.error(error.response?.data || error.message);
+    localStorage.removeItem("token");
+    console.error(errorMessage(error));
     return null;
   }
 };
 
 export const userLogOut = async () => {
   try {
-    await account.post("logout/")
+    await account.post("accounts/logout/");
   } catch (error) {
-    console.error("logout request failed",error.response?.data || error.message);
+    console.error(
+      "logout request failed",
+      errorMessage(error),
+    );
   }
-  localStorage.removeItem("token")
-  return null
+  localStorage.removeItem("token");
+  return null;
+};
+
+export const requireLogin = async () => {
+  if (!localStorage.getItem("token")) {
+    throw redirect("/");
+  }
+  return null;
+};
+
+export const redirectIfLoggedIn = async () => {
+  return localStorage.getItem("token")
+    ? redirect("home/")
+    : null;
 };

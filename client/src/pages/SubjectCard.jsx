@@ -35,7 +35,9 @@ export default function SubjectCard() {
 
   return (
     <div className="mx-auto mt-8 w-80 rounded-md border border-black p-4 shadow-sm">
-      <h3 className="mb-3 text-lg font-semibold">{subjectData.subject_name}</h3>
+      <h3 className="mb-3 text-lg font-semibold">
+        {subjectData.subject_name}
+      </h3>
 
       <p>Professor: {subjectData.professor}</p>
       <p>Students: {subjectData.students}</p>
