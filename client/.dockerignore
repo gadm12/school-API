@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Testing / cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python tooling
+.mypy_cache/
+.ruff_cache/

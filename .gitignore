@@ -51,3 +51,10 @@ htmlcov/
 .cache/
 *Zone.Identifier*
 client/node_modules/
+# Virtual environment
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.env.*
