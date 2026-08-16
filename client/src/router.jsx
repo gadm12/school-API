@@ -14,6 +14,8 @@ import {
   requireLogin,
   userConfirmation,
 } from "./Users/AccountApi";
+import BooksPage from "./pages/BookPage";
+import BookCard from "./pages/BookCard";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
       {
         path: "subjects/:id",
         element: <SubjectCard />,
+      },
+      {
+        path: "book",
+        element: <BooksPage />,
+      },
+      {
+        path: "/books/:id",
+        element: <BookCard />,
       },
       //   {
       //     path: "*",

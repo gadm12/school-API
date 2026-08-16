@@ -32,16 +32,28 @@ export const userAuth = async (
     const response = await account.post(
       register ? "accounts/register/" : "accounts/login/",
       {
-        email: email,
-        password: password,
+        email,
+        password,
       },
     );
+
     const { user, token } = response.data;
-    localStorage.setItem("token", token);
-    return user;
+
+    if (!register) {
+      localStorage.setItem("token", token);
+    }
+
+    return {
+      user,
+      error: null,
+    };
   } catch (error) {
     console.error(errorMessage(error));
-    return { user: null, error: errorMessage(error) };
+
+    return {
+      user: null,
+      error: errorMessage(error),
+    };
   }
 };
 

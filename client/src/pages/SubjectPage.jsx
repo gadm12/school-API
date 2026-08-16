@@ -15,7 +15,9 @@ export default function SubjectPage() {
 
         setSubjects(response.data);
       } catch (error) {
-        console.error(error.response?.data || error.message);
+        console.error(
+          error.response?.data || error.message,
+        );
         setError("Could not load the subjects.");
       }
     };
@@ -32,8 +34,8 @@ export default function SubjectPage() {
   }
 
   return (
-    <>
-      <h1 className="bg-amber-400">Subjects</h1>
+    <main className="mx-auto mt-8 max-w-3xl px-4">
+      <h1 className="text-3xl font-bold">Subjects</h1>
 
       <hr className="my-4" />
 
@@ -43,12 +45,15 @@ export default function SubjectPage() {
             key={item.id}
             className="rounded-lg border border-gray-300 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
           >
-            <Link to={`/subjects/${item.id}`} className="block px-4 py-3">
+            <Link
+              to={`/subjects/${item.id}`}
+              className="block px-4 py-3"
+            >
               {item.subject_name}
             </Link>
           </li>
         ))}
       </ul>
-    </>
+    </main>
   );
 }

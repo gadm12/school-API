@@ -8,7 +8,7 @@ from rest_framework.throttling import AnonRateThrottle
 from django.core.cache import cache
 from rich import print
 
-CACHE_TTL = 1
+CACHE_TTL = 60 * 5
 
 
 class BookUserRateThrottle(UserRateThrottle):
@@ -57,7 +57,9 @@ class BookProject(APIView):
 
         except requests.RequestException:
             return Response(
-                {"error": "Google Books service is temporarily unavailable."},
+                {
+                    "error": "Google Books service is temporarily unavailable."
+                },
                 status=503,
             )
 
@@ -76,6 +78,7 @@ class BookProject(APIView):
                     "thumbnail": info.get("imageLinks", {}).get(
                         "thumbnail"
                     ),
+                    "description": info.get("description"),
                     "preview_link": info.get("previewLink"),
                 }
             )
